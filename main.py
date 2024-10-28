@@ -45,11 +45,3 @@ if __name__ == "__main__":
             print(f"Insurance Date: {bike['insurance_date']}")
             print(f"Registration Date: {bike['registration_date']}")
             print("\n")
-
-    # while is_active:
-    #     app = DirtBikeMaintenanceApp()
-    #     bike1 = DirtBike( " Yamaha YZ250F", "2023-12-01", "2023-11-01")
-    #     bike1.add_preference("tires", "Michelin Starcross 5")
-    #     bike1.log_ride("mountain", "2 hours", "Rocky Mountain", "sunny")
-    #     app.add_bike(bike1)
-    #     app.save_to_file("bikes.json")
