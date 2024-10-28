@@ -1,9 +1,9 @@
 [
     {
-        "id": "2a70ca4b-c267-4b38-9b20-b53753c774cc",
-        "name": "b",
-        "insurance_date": "b",
-        "registration_date": "",
+        "id": "24eaf548-351b-4776-9cf2-427c170c6109",
+        "name": "z",
+        "insurance_date": "z",
+        "registration_date": "z",
         "preferred_tires": [
             "Michelin Starcross 5"
         ],
@@ -16,7 +16,34 @@
                 "duration": "2 hours",
                 "location": "Rocky Mountain",
                 "weather": "sunny",
-                "date": "2024-10-26 11:22:10"
+                "date": "2024-10-28 05:06:00"
+            }
+        ]
+    },
+    {
+        "name": "q",
+        "insurance_date": "q",
+        "registration_date": "dfasd"
+    }
+][
+    {
+        "id": "204d9bbe-6de5-4d11-a7eb-b4d4b39b5b96",
+        "name": "q",
+        "insurance_date": "q",
+        "registration_date": "dfasd",
+        "preferred_tires": [
+            "Michelin Starcross 5"
+        ],
+        "preferred_grips": [],
+        "preferred_chains": [],
+        "preferred_chemicals": [],
+        "ride_logs": [
+            {
+                "terrain": "mountain",
+                "duration": "2 hours",
+                "location": "Rocky Mountain",
+                "weather": "sunny",
+                "date": "2024-10-28 05:07:52"
             }
         ]
     }
