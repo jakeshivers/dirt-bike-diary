@@ -10,8 +10,21 @@ class DirtBikeMaintenanceApp:
         self.bikes.append(bike)
 
     def save_to_file(self, filename):
-        with open(filename, "a") as file:
-            json.dump([bike.to_dict() for bike in self.bikes], file, indent=4)
+        # Load existing bikes from file
+        try:
+            with open(filename, "r") as file:
+                existing_bikes_data = json.load(file)
+                existing_bikes = [
+                    DirtBike(
+                        bike["name"], bike["insurance_date"], bike["registration_date"]
+                    )
+                    for bike in existing_bikes_data
+                ]
+        except (FileNotFoundError, json.JSONDecodeError):
+            existing_bikes = []
+
+        # Combine existing bikes with current app bikes
+        all_bikes = existing_bikes + self.bikes
 
     def load_from_file(self, filename):
         with open(filename, "r") as file:
