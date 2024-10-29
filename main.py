@@ -70,3 +70,4 @@ if __name__ == "__main__":
         print(f"Weather: {weather}")
         print(f"Event Date: {event_date}")
         print("\n")
+\

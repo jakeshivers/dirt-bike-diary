@@ -9,10 +9,6 @@ class DirtBike:
         self.name = name
         self.insurance_date = insurance_date
         self.registration_date = registration_date
-        # self.preferred_tires = []
-        # self.preferred_grips = []
-        # self.preferred_chains = []
-        # self.preferred_chemicals = []
         self.ride_logs = []
 
     def add_preference(self, bike_name):
@@ -25,7 +21,6 @@ class DirtBike:
                 while add_another == "y":
                     category = input("Enter category (tires/grips/chains/chemicals): ")
                     item = input("Enter item: ")
-                    bike1 = DirtBike(bike)
 
                     if "preferences" not in bike:
                         bike["preferences"] = {}
@@ -44,13 +39,13 @@ class DirtBike:
         with open("bikes.json", "w") as file:
             json.dump(bikes_data, file, indent=4)
 
-    def log_ride(self, terrain, duration, location, weather):
+    def log_ride(self, terrain, duration, location, weather, event_date):
         ride = {
             "terrain": terrain,
             "duration": duration,
             "location": location,
             "weather": weather,
-            "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "event_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         }
         self.ride_logs.append(ride)
 
