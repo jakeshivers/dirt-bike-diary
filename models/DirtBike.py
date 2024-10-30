@@ -1,10 +1,7 @@
 from datetime import datetime
 from uuid import uuid4
-<<<<<<< HEAD
 import json
-=======
 import datetime as dt
->>>>>>> 3f2ec5011767bb9c388f562bcbeb150e7f0efe13
 
 
 class DirtBike:
@@ -52,16 +49,3 @@ class DirtBike:
             "event_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         }
         self.ride_logs.append(ride)
-
-    def to_dict(self):
-        return {
-            "id": self.id,
-            "name": self.name,
-            "insurance_date": self.insurance_date,
-            "registration_date": self.registration_date,
-            "preferred_tires": self.preferred_tires,
-            "preferred_grips": self.preferred_grips,
-            "preferred_chains": self.preferred_chains,
-            "preferred_chemicals": self.preferred_chemicals,
-            "ride_logs": self.ride_logs,
-        }

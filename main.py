@@ -60,6 +60,7 @@ if __name__ == "__main__":
         location = input("Enter location: ")
         weather = input("Enter weather: ")
         event_date = input("Enter event date (YYYY-MM-DD): ")
+
         bike1 = DirtBike(bike_name)
         bike1.log_ride(terrain, duration, location, weather, event_date)
         print("Ride logged successfully!")
@@ -70,4 +71,3 @@ if __name__ == "__main__":
         print(f"Weather: {weather}")
         print(f"Event Date: {event_date}")
         print("\n")
-\

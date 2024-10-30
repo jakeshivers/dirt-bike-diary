@@ -1,36 +1,11 @@
 [
     {
-        "name": "bike1",
-        "insurance_date": "",
+        "name": "ktm",
+        "insurance_date": "11",
         "registration_date": "",
         "preferences": {
-            "tires": "TTTTT",
-            "grips": "PPPPPP",
-            "chain": "zzz",
-            "chemicals": "BelRay"
+            "tires": "dunlop",
+            "grips": "odi"
         }
-    }
-]
-[
-    {
-        "id": "2a70ca4b-c267-4b38-9b20-b53753c774cc",
-        "name": "b",
-        "insurance_date": "b",
-        "registration_date": "",
-        "preferred_tires": [
-            "Michelin Starcross 5"
-        ],
-        "preferred_grips": [],
-        "preferred_chains": [],
-        "preferred_chemicals": [],
-        "ride_logs": [
-            {
-                "terrain": "mountain",
-                "duration": "2 hours",
-                "location": "Rocky Mountain",
-                "weather": "sunny",
-                "date": "2024-10-26 11:22:10"
-            }
-        ]
     }
 ]
