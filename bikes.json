@@ -7,5 +7,26 @@
             "tires": "dunlop",
             "grips": "odi"
         }
+    },
+    {
+        "name": "Kawasaki",
+        "insurance_date": "2025-01-12",
+        "registration_date": "2025-03-15",
+        "rides": [
+            {
+                "terrain": "sandy",
+                "duration": "3 hours",
+                "location": "Jericho, UT",
+                "weather": "cold and wet",
+                "event_date": "2022-01-15"
+            },
+            {
+                "event_date": "2024-08-01",
+                "terrain": "mountains and trees",
+                "duration": "5 hours",
+                "location": "Idaho",
+                "weather": "sunny and HOT"
+            }
+        ]
     }
 ]

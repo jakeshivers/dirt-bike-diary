@@ -1,4 +1,3 @@
-from datetime import datetime
 from uuid import uuid4
 import json
 import datetime as dt
@@ -10,7 +9,6 @@ class DirtBike:
         self.name = name
         self.insurance_date = insurance_date
         self.registration_date = registration_date
-        self.ride_logs = []
 
     def add_preference(self, bike_name):
         with open("bikes.json", "r") as file:
@@ -40,12 +38,43 @@ class DirtBike:
         with open("bikes.json", "w") as file:
             json.dump(bikes_data, file, indent=4)
 
-    def log_ride(self, terrain, duration, location, weather, event_date):
-        ride = {
-            "terrain": terrain,
-            "duration": duration,
-            "location": location,
-            "weather": weather,
-            "event_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        }
-        self.ride_logs.append(ride)
+    def log_ride(self, bike_name):
+        with open("bikes.json", "r") as file:
+            bikes_data = json.load(file)
+
+        bike_found = False
+        for bike in bikes_data:
+            if bike["name"] == bike_name:
+                bike_found = True
+                event_date = input("Enter event date (YYYY-MM-DD): ")
+                terrain = input("Enter terrain: ")
+                duration = input("Enter duration: ")
+                location = input("Enter location: ")
+                weather = input("Enter weather: ")
+
+                if "rides" not in bike:
+                    bike["rides"] = []
+                bike["rides"].append(
+                    {
+                        "event_date": event_date,
+                        "terrain": terrain,
+                        "duration": duration,
+                        "location": location,
+                        "weather": weather,
+                    }
+                )
+
+                print("Ride logged successfully!")
+                print("Ride details: ")
+                print(f"Terrain: {terrain}")
+                print(f"Duration: {duration}")
+                print(f"Location: {location}")
+                print(f"Weather: {weather}")
+                print(f"Event Date: {event_date}")
+                print("\n")
+
+        if not bike_found:
+            print(f"No bike found with the name {bike_name}")
+
+        with open("bikes.json", "w") as file:
+            json.dump(bikes_data, file, indent=4)
